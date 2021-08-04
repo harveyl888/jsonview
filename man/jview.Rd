@@ -46,7 +46,7 @@ if (interactive()) {
   }'
 
   shiny::shinyApp(
-    ui = fluidPage(
+    ui = shiny::fluidPage(
       jsonview::jviewOutput("json")
     ),
     server = function(input, output) {

@@ -8,3 +8,4 @@ Description: htmlWidget for jsonview.  Displays a json object as a
 License: MIT
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.1

@@ -1,0 +1,10 @@
+Package: jsonview
+Type: Package
+Title: A simple JSON tree viewer
+Version: 0.0.0.9000
+Authors@R: c(person("Harvey", "Lieberman", email = "harvey.lieberman@gmail.com", role = c("aut", "cre")), person("Pavel Grabovets", email = "pgrabovets3056@gmail.com", role = c("aut", "cph"), comment = "jsonview javascript library"))
+Description: htmlWidget for jsonview.  Displays a json object as a
+    simple tree view.
+License: MIT
+Encoding: UTF-8
+LazyData: true

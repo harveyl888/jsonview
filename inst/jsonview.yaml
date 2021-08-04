@@ -1,0 +1,6 @@
+dependencies:
+  - name: jsonview
+    version: 1.0.0
+    src: htmlwidgets/jsonview
+    script: jsonview.js
+    stylesheet: jsonview.css

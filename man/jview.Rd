@@ -20,3 +20,41 @@ jview(data, width = NULL, height = NULL, elementId = NULL, expanded = FALSE)
 \description{
 Display a JSON string as a collapsible tree
 }
+\examples{
+if (interactive()) {
+  library(shiny)
+  library(jsonview)
+
+  json_test <- '{
+    "givenName": "Vas",
+    "surName": "Sudanagunta",
+    "children": [
+      {
+        "givenName": "Natalia",
+        "age": 5
+      },
+      {
+        "givenName": "Aida",
+        "age": 17
+      }
+    ],
+    "address": {
+      "state": "NY",
+      "city": "Brooklyn",
+      "street": "718 Marcus Garvey Ave"
+    }
+  }'
+
+  shiny::shinyApp(
+    ui = fluidPage(
+      jsonview::jviewOutput("json")
+    ),
+    server = function(input, output) {
+      output$json <- jsonview::renderJview({
+        jsonview::jview(data = json_test, expanded = TRUE)
+      })
+    }
+  )
+}
+
+}
